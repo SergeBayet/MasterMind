@@ -1,0 +1,64 @@
+body {
+  background-color: black;
+  color: white;
+}
+.board {
+  height: 100vh;
+  border: 2px solid brown;
+}
+.left-board {
+  height: 100%;
+  background-image: url("/assets/images/wood.jpg");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+.right-board {
+  background-color: #13181c;
+  height: 100%;
+  opacity: 0.7;
+}
+.brand {
+  height: 100%;
+  background-image: url("/assets/images/mm_brand_vertical.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.secret-combination {
+  height: 50px;
+
+  text-align: center;
+  background-image: url("/assets/images/wood.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  border-bottom: 2px solid gray;
+}
+.combination {
+  height: 100%;
+  padding: 12px !important;
+}
+.item {
+  padding: 0;
+  display: inline-block;
+  background: radial-gradient(circle at 10px 10px, blue, rgb(117, 109, 197));
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 1px black;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.diff {
+  padding: 0;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.history-combination {
+  margin: 0;
+}

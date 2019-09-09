@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Mastermind</title>
+  </head>
+  <body>
+    <div class="container row">
+      <div class="game-container col offset-s3 s6">
+        <div class="board row">
+          <div class="left-board col s9">
+            <div class="secret-combination row">
+              <div class="combination col s12">
+                <span class="item"> </span>
+                <span class="item"> </span>
+                <span class="item"> </span>
+              </div>
+            </div>
+            <div class="history-combinations">
+              <div class="history-combination row">
+                <div class="combination col s9">
+                  <span class="item"> </span>
+                  <span class="item"> </span>
+                  <span class="item"> </span>
+                </div>
+                <div class="differences col s3">
+                  <span class="diff"></span>
+                  <span class="diff"></span>
+                  <span class="diff"></span>
+                  <span class="diff"></span>
+                </div>
+              </div>
+              <div class="history-combination row">
+                <div class="combination col s9">
+                  <span class="item"> </span>
+                  <span class="item"> </span>
+                  <span class="item"> </span>
+                </div>
+                <div class="differences col s3">
+                  <span class="diff"></span>
+                  <span class="diff"></span>
+                  <span class="diff"></span>
+                  <span class="diff"></span>
+                </div>
+              </div>
+              <div class="current-combination row">
+                <div class="combination col s9">
+                  <span class="item"> </span>
+                  <span class="item"> </span>
+                  <span class="item"> </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-board col s3">
+            <div class="brand"></div>
+          </div>
+        </div>
+      </div>
+      <!-- game container -->
+      <div class="choice-box"></div>
+    </div>
+  </body>
+</html>
