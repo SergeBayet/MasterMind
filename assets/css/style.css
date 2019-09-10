@@ -27,15 +27,44 @@ body {
 
 .secret-combination {
   height: 50px;
+  opacity: 1;
   text-align: center;
   background-image: url("/assets/images/wood.jpg");
   background-size: cover;
   background-repeat: repeat;
   border-bottom: 2px solid gray; }
 
+.hidden {
+  opacity: 0; }
+
 .combination {
   height: 100%;
   padding: 12px !important; }
+
+.combinations {
+  height: 80%;
+  max-height: 80%;
+  width: 95%;
+  margin: auto;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.current-combination {
+  border: 2px dotted white;
+  height: 50px; }
+  .current-combination .item:hover {
+    cursor: pointer;
+    opacity: 0.7; }
+
+.choice-box {
+  height: 10%;
+  display: inline-block;
+  height: 50px;
+  bottom: 0%;
+  text-align: center; }
+  .choice-box .item:hover {
+    cursor: pointer;
+    opacity: 0.7; }
 
 .item {
   padding: 0;
@@ -52,11 +81,16 @@ body {
   padding: 0;
   display: inline-block;
   background-color: white;
+  box-shadow: 2px 2px 2px 1px #462408;
   border-radius: 50%;
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   margin-left: 5px;
   margin-right: 5px; }
 
 .history-combination {
   margin: 0; }
+
+#confetti-canvas {
+  position: fixed;
+  top: 0; }

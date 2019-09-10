@@ -14,9 +14,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="js/confetti.js"></script>
     <title>Mastermind</title>
   </head>
   <body>
@@ -24,48 +25,16 @@
       <div class="game-container col offset-s3 s6">
         <div class="board row">
           <div class="left-board col s9">
-            <div class="secret-combination row">
-              <div class="combination col s12">
-                <span class="item"> </span>
-                <span class="item"> </span>
-                <span class="item"> </span>
-              </div>
+            <div class="secret-combination hidden row">
+              <div class="combination col s12"></div>
             </div>
-            <div class="history-combinations">
-              <div class="history-combination row">
-                <div class="combination col s9">
-                  <span class="item"> </span>
-                  <span class="item"> </span>
-                  <span class="item"> </span>
-                </div>
-                <div class="differences col s3">
-                  <span class="diff"></span>
-                  <span class="diff"></span>
-                  <span class="diff"></span>
-                  <span class="diff"></span>
-                </div>
-              </div>
-              <div class="history-combination row">
-                <div class="combination col s9">
-                  <span class="item"> </span>
-                  <span class="item"> </span>
-                  <span class="item"> </span>
-                </div>
-                <div class="differences col s3">
-                  <span class="diff"></span>
-                  <span class="diff"></span>
-                  <span class="diff"></span>
-                  <span class="diff"></span>
-                </div>
-              </div>
+            <div class="combinations">
+              <div class="history-combinations"></div>
               <div class="current-combination row">
-                <div class="combination col s9">
-                  <span class="item"> </span>
-                  <span class="item"> </span>
-                  <span class="item"> </span>
-                </div>
+                <div class="combination col s12"></div>
               </div>
             </div>
+            <div class="choice-box "></div>
           </div>
           <div class="right-board col s3">
             <div class="brand"></div>
@@ -73,7 +42,23 @@
         </div>
       </div>
       <!-- game container -->
-      <div class="choice-box"></div>
+      <div class="menu col s3">
+        <button class="btn waves-effect waves-light hidden" id="restart">
+          Restart
+          <i class="material-icons right">send</i>
+        </button>
+
+        <form action="#">
+          <p class="range-field">
+            <input type="range" id="difficulty" min="2" max="7" value="4" />
+          </p>
+          <p class="range-field">
+            <input type="range" id="ncolors" min="2" max="10" value="6" />
+          </p>
+        </form>
+      </div>
     </div>
   </body>
+
+  <script src="js/index.js"></script>
 </html>
