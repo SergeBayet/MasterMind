@@ -165,13 +165,13 @@
   document.getElementById("difficulty").addEventListener("change", event => {
     difficulty = event.target.value;
     nColors = document.getElementById("ncolors").value;
-    console.log(difficulty, nColors);
+
     restart();
   });
   document.getElementById("ncolors").addEventListener("change", event => {
     nColors = event.target.value;
     difficulty = document.getElementById("difficulty").value;
-    console.log(difficulty, nColors);
+
     restart();
   });
   document.getElementById("restart").addEventListener("click", event => {
@@ -179,16 +179,17 @@
   });
 
   function restart() {
-    console.log(difficulty, nColors);
     secret_combination = new Combination(nColors, difficulty);
+
     el = document.querySelector(".history-combinations");
     el.innerHTML = "";
+
     el = document.querySelector(".current-combination .combination");
     el.innerHTML = "";
+
     el = document.querySelector(".secret-combination");
     el.classList.add("hidden");
-    el = document.getElementById("restart");
-    el.classList.add("hidden");
+
     el = document.querySelector(".secret-combination .combination");
     secret_combination.toHTML(el);
 
@@ -197,6 +198,7 @@
     Combination.choiceBox(nColors, el);
 
     current_combination = new Combination(nColors, difficulty, []);
+    eventsOnCurrentCombination();
     choiceItemsDOM = document.querySelectorAll(".choice-box .item");
     choiceItemsDOM.forEach(item => {
       item.addEventListener("click", event => {
@@ -238,8 +240,7 @@
   function win() {
     el = document.querySelector(".secret-combination");
     el.classList.remove("hidden");
-    el = document.getElementById("restart");
-    el.classList.remove("hidden");
+
     startConfetti();
   }
 })();

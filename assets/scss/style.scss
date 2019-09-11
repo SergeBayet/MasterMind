@@ -1,6 +1,13 @@
 body {
   background-color: black;
   color: white;
+  background-image: url("../images/prism.png");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+input[type="range"] {
+  border: none;
 }
 .board {
   height: 100vh;
@@ -8,7 +15,7 @@ body {
 }
 .left-board {
   height: 100%;
-  background-image: url("/assets/images/wood.jpg");
+  background-image: url("../images/wood.jpg");
   background-size: contain;
   background-repeat: repeat;
   background-position: center;
@@ -20,7 +27,7 @@ body {
 }
 .brand {
   height: 100%;
-  background-image: url("/assets/images/mm_brand_vertical.png");
+  background-image: url("../images/mm_brand_vertical.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -29,9 +36,6 @@ body {
   height: 50px;
   opacity: 1;
   text-align: center;
-  background-image: url("/assets/images/wood.jpg");
-  background-size: cover;
-  background-repeat: repeat;
   border-bottom: 2px solid gray;
 }
 .hidden {
@@ -79,8 +83,8 @@ body {
   background: radial-gradient(circle at 10px 10px, blue, rgb(117, 109, 197));
   border-radius: 50%;
   box-shadow: 2px 2px 2px 1px black;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -102,4 +106,10 @@ body {
 #confetti-canvas {
   position: fixed;
   top: 0;
+}
+.range-field {
+  display: block;
+}
+.menu {
+  padding-top: 50px;
 }
